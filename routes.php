@@ -51,7 +51,7 @@ Route::get('wechat/server', array('middleware' => ['web'], function($provider_na
 
     //\Log::info('return response.');
 
-    // return $wechat->server->serve();
+    return $wechat->server->serve();
 
 }));
 // http://home.flynsarmy.com/flynsarmy/sociallogin/Google?s=/&f=/login
