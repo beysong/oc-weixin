@@ -6,7 +6,7 @@ use Beysong\Weixin\Classes\WechatManager;
 
 require_once('vendor/autoload.php');
 
-Route::get('wechat/server', array("as" => "asdf1", 'middleware' => ['web'], function($provider_name, $action = "")
+Route::post('wechat/server', array('middleware' => ['web'], function($provider_name, $action = "")
 {
     
     // $wechat = app('wechat.official_account');
@@ -55,18 +55,18 @@ Route::get('wechat/server', array("as" => "asdf1", 'middleware' => ['web'], func
 
 }));
 // http://home.flynsarmy.com/flynsarmy/sociallogin/Google?s=/&f=/login
-Route::get('auth/session', array("as" => "asdf1", 'middleware' => ['web'], function($provider_name, $action = "")
+Route::get('auth/session', array('middleware' => ['web'], function($provider_name, $action = "")
 {
     $app = WechatManager::instance()->app();
     // $app = EasyWeChat\Factory::miniProgram($config);
     $session_third = $app->auth->session(Input::get('code'));
     return response()->json(['data'=>['login_code'=>'login_code', 'third_session'=>'------', 'test'=>$session_third], 'code'=>0]);
 }));
-Route::get('auth/check_session', array("as" => "adsf2", 'middleware' => ['web'], function($provider_name, $action = "")
+Route::get('auth/check_session', array('middleware' => ['web'], function($provider_name, $action = "")
 {
     return response()->json(['data'=>[], 'code'=>0]);
 }));
-Route::get('beysong/weixin/wechat_callback', array("as" => "asdf3", 'middleware' => ['web'], function()
+Route::get('beysong/weixin/wechat_callback', array('middleware' => ['web'], function()
 {
     // $options = [
     //     'debug'  => true,
