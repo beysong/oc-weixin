@@ -12,7 +12,7 @@ Route::get('wechat/server', array("as" => "asdf1", 'middleware' => ['web'], func
     // $wechat = app('wechat.official_account');
     $wechat = WechatManager::instance()->app();
 
-    $response = $app->server->serve();
+    $response = $wechat->server->serve();
     // 将响应输出
     $response->send();exit; // Laravel 里请使用：return $response;
 
