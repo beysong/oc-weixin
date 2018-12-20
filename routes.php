@@ -6,7 +6,7 @@ use Beysong\Weixin\Classes\WechatManager;
 
 require_once('vendor/autoload.php');
 
-Route::post('wechat/server', array('middleware' => ['web'], function($provider_name, $action = "")
+Route::get('wechat/server', array('middleware' => ['web'], function($provider_name, $action = "")
 {
     
     // $wechat = app('wechat.official_account');
@@ -51,7 +51,7 @@ Route::post('wechat/server', array('middleware' => ['web'], function($provider_n
 
     //\Log::info('return response.');
 
-    return $wechat->server->serve();
+    // return $wechat->server->serve();
 
 }));
 // http://home.flynsarmy.com/flynsarmy/sociallogin/Google?s=/&f=/login
