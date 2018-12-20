@@ -6,7 +6,7 @@ use Beysong\Weixin\Classes\WechatManager;
 
 require_once('vendor/autoload.php');
 
-Route::get('wechat/server', array('middleware' => ['web'], function($provider_name, $action = "")
+Route::post('wechat/server', array('middleware' => ['web'], function($provider_name, $action = "")
 {
     
     // $wechat = app('wechat.official_account');
