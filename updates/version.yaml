@@ -1,0 +1,10 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table beysong_weixin_user'
+    - builder_table_create_beysong_weixin_user.php
+    - 'Created table beysong_weixin_autoreply'
+    - builder_table_create_beysong_weixin_autoreply.php
+1.0.3:
+    - 'Created table beysong_weixin_menu'
+    - builder_table_create_beysong_weixin_menu.php

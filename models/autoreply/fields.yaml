@@ -1,0 +1,24 @@
+fields:
+    keywords:
+        label: Keywords
+        span: auto
+        type: text
+    reply:
+        label: 'Wecaht Reply'
+        size: tiny
+        span: auto
+        type: textarea
+    type:
+        label: Type
+        options:
+            text: 文本
+            vedio: Vedio
+            image: 图片
+            event: 事件
+            voice: 语音
+            location: 坐标
+            link: 链接
+            file: 文件
+        span: auto
+        default: text
+        type: dropdown

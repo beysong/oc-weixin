@@ -1,0 +1,61 @@
+<?= $this->listRender() ?>
+<a href="javascript:void(0)" class="btn btn-primary btn-lg">提交到线上</a>
+
+<div class="control-list">
+<h3>当前菜单</h3>
+    <table class="table data" data-control="rowlink">
+        <thead>
+            <tr>
+                <th style="width: 150px"><span>主</span></th>
+                <th style="width: 150px"><span>Action</span></th>
+                <th><a href="javascript:;">Name</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($menuList['menu']['button'] as $item):  ?>
+            <tr>
+                <td>
+                    主
+                </td>
+                <td class="column-button nolink">
+                    <?= $item['name'] ?>
+                </td>
+                <td>
+                    <?= $item['name'] ?>
+                </td>
+            </tr>
+            <?php foreach ($item['sub_button'] as $item):  ?>
+                <tr>
+                    <td></td>
+                    <td class="column-button nolink">
+                        <?= $item['name'] ?>
+                    </td>
+                    <td>
+                        <?= $item['name'] ?>
+                    </td>
+                </tr>
+                <?php endforeach ?>
+            <?php endforeach ?>
+        </tbody>
+    </table>
+    <!-- <button type="button" class="btn btn-primary">添加</button> -->
+    <a data-toggle="modal" href="#content-confirmation" class="btn btn-primary btn-lg">添加</a>
+    <div class="control-popup modal fade" id="content-confirmation" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Are you sure you wanna do that?</h4>
+                </div>
+                <div class="modal-body">
+                    <p>This is your last chance. After this, there is no turning back.</p>
+                    <p>You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill - you stay in Wonderland, and I show you how deep the rabbit hole goes.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Blue Pill</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Red Pill</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

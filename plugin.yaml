@@ -1,0 +1,20 @@
+plugin:
+    name: 'beysong.weixin::lang.plugin.name'
+    description: 'beysong.weixin::lang.plugin.description'
+    author: beysong
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: WeiXin
+        url: beysong/weixin/autoreply
+        icon: icon-yelp
+        sideMenu:
+            side-menu-item:
+                label: 自动回复
+                url: beysong/weixin/autoreply
+                icon: icon-users
+            side-menu-item2:
+                label: 微信菜单
+                url: beysong/weixin/wechatmenu
+                icon: icon-sliders

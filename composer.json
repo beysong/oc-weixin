@@ -1,0 +1,19 @@
+{
+    "name": "beysong/Weixin",
+    "description": "beysong wechat",
+    "homepage": "http://www.themeshow.cn",
+    "keywords": [
+        "october",
+        "cms",
+        "wechat",
+        "laravel"
+    ],
+    "authors": [{
+        "name": "beysong",
+        "email": "beywsong@gmail.com"
+    }],
+    "require": {
+        "php": ">=5.4.0",
+        "overtrue/laravel-wechat": "~4.0.22"
+    }
+}

@@ -1,0 +1,25 @@
+columns:
+    name:
+        label: 名称
+        type: text
+    type:
+        label: 类型
+        type: text
+    key:
+        label: Key
+        type: text
+    url:
+        label: 小程序URL
+        type: text
+    pagepath:
+        label: 小程序路径
+        type: text
+    parent_id:
+        label: 父菜单ID
+        type: number
+    id:
+        label: ID
+        type: number
+    created_at:
+        label: 创建时间
+        type: datetime

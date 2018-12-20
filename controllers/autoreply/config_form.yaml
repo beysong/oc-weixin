@@ -1,0 +1,11 @@
+name: AutoReply
+modelClass: Beysong\Weixin\Models\Autoreply
+form: $/beysong/weixin/models/autoreply/fields.yaml
+defaultRedirect: beysong/weixin/autoreply
+create:
+    redirect: 'beysong/weixin/autoreply/update/:id'
+    redirectClose: beysong/weixin/autoreply
+update:
+    redirect: beysong/weixin/autoreply
+    redirectClose: beysong/weixin/autoreply
+preview: {  }

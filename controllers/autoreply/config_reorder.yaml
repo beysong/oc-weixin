@@ -1,0 +1,5 @@
+title: AutoReply
+modelClass: Beysong\Weixin\Models\Autoreply
+nameFrom: AutoReply
+toolbar:
+    buttons: reorder_toolbar
