@@ -20,7 +20,8 @@ Route::get('wechat/server', array('middleware' => ['web'], function($provider_na
         switch ($message->MsgType) {
             case 'event':
             if($message->Event == 'subscribe'){
-
+                return '感谢关注';
+                break;
             }
             return '收到事件消息';
             break;
