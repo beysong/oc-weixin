@@ -18,10 +18,16 @@ Route::post('wechat/server', array('middleware' => ['web'], function($provider_n
 
     $wechat->server->push(function($message){
         // \Log::info($message->MsgType);
-        \Log::info($message);
-        switch ($message->MsgType) {
+        $msg = ['ToUserName' => 'gh_049265ffc458',
+            'FromUserName' => 'oVP3YwgF8vKiIXVc8zQ1Is9lDVvA',
+            'CreateTime' => '1545363577',
+            'MsgType' => 'event',
+            'Event' => 'subscribe',
+            'EventKey' => NULL];
+        \Log::info($msg);
+        switch ($msg->MsgType) {
             case 'event':
-            if($message->MsgType == 'subscribe'){
+            if($msg->Event == 'subscribe'){
                 return '感谢关注';
                 break;
             }
