@@ -17,6 +17,7 @@ Route::post('wechat/server', array('middleware' => ['web'], function($provider_n
     // $response->send();exit; // Laravel 里请使用：return $response;
 
     $wechat->server->push(function($message){
+        \Log::info('return response1.');
         switch ($message->MsgType) {
             case 'event':
             if($message->Event == 'subscribe'){
@@ -26,6 +27,7 @@ Route::post('wechat/server', array('middleware' => ['web'], function($provider_n
             return '收到事件消息';
             break;
             case 'text':
+            \Log::info('return response2.');
             return '收到文字消息';
             break;
             case 'image':
@@ -50,7 +52,7 @@ Route::post('wechat/server', array('middleware' => ['web'], function($provider_n
         }
     });
 
-    //\Log::info('return response.');
+    \Log::info('return response.');
 
     return $wechat->server->serve();
 
