@@ -17,7 +17,7 @@ Route::post('wechat/server', array('middleware' => ['web'], function($provider_n
     // $response->send();exit; // Laravel 里请使用：return $response;
 
     $wechat->server->push(function($message){
-        \Log::info($message->MsgType);
+        // \Log::info($message->MsgType);
         \Log::info($message);
         switch ('text') {
             case 'event':
