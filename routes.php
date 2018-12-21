@@ -17,8 +17,9 @@ Route::post('wechat/server', array('middleware' => ['web'], function($provider_n
     // $response->send();exit; // Laravel 里请使用：return $response;
 
     $wechat->server->push(function($message){
-        \Log::info($message);
-        switch ($message->MsgType) {
+        \Log::info($message->MsgType);
+        \Log::info($message['MsgType']);
+        switch ($message['MsgType']) {
             case 'event':
             if($message->Event == 'subscribe'){
                 return '感谢关注';
