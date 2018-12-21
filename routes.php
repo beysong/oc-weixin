@@ -19,9 +19,9 @@ Route::post('wechat/server', array('middleware' => ['web'], function($provider_n
     $wechat->server->push(function($message){
         // \Log::info($message->MsgType);
         \Log::info($message);
-        switch ('text') {
+        switch ($message->MsgType) {
             case 'event':
-            if($message->Event == 'subscribe'){
+            if($message->MsgType == 'subscribe'){
                 return '感谢关注';
                 break;
             }
