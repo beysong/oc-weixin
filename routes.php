@@ -16,19 +16,17 @@ Route::post('wechat/server', array('middleware' => ['web'], function($provider_n
     // // 将响应输出
     // $response->send();exit; // Laravel 里请使用：return $response;
 
-    $wechat->server->push(function($message2){
-        $message = (object)$message2;
-        \Log::info($message->MsgType);
-        switch ($message->MsgType) {
+    $wechat->server->push(function($message){
+        // $message = (object)$message2;
+        switch ($message['MsgType']) {
             case 'event':
-            if($message->Event == 'subscribe'){
+            if($message['Event'] == 'subscribe'){
                 return '感谢关注';
                 break;
             }
             return '收到事件消息';
             break;
             case 'text':
-            \Log::info('return response2.');
             return '收到文字消息';
             break;
             case 'image':
