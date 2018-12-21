@@ -36,7 +36,6 @@ class Plugin extends PluginBase
         // $alias = AliasLoader::getInstance();
         // $alias->alias('LaravelWechat', 'Overtrue\LaravelWechat\Facade');
 
-
         // \Event::listen('Overtrue\LaravelWeChat\Events\WeChatUserAuthorized', function($event)
         // {
         //     // dd($event);
@@ -84,12 +83,3 @@ class Plugin extends PluginBase
         }
     }
 }
-
-
-// https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx31b92b41c42c99f4&
-// redirect_uri=http%3A%2F%2Fhomestead.test%2F&
-// response_type=code&scope=snsapi_userinfo&
-// state=dc4a392bcf144c6567ca13f7d88b0529&
-// connect_redirect=1&uin=MjkwMzM0MjE0MQ%3D%3D&
-// key=ff3783ffb2496c41c200b7cf4a7a344abc1bec508b7e624c9b5516d15bc60ada680e62779adf7752c30378c3a994691b&
-// pass_ticket=CA/H+PmRWKkcpG6VwLtPSAVn9hvDuFDoID7VN4UR9yl+PI5HodUlxZ6k+i4NI/FxVGd9mXpIwPBcDMHt+0x5aA==

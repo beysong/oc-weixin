@@ -9,15 +9,13 @@ require_once('vendor/autoload.php');
 Route::post('wechat/server', array('middleware' => ['web'], function($provider_name, $action = "")
 {
     
-    // $wechat = app('wechat.official_account');
     $wechat = WechatManager::instance()->app();
 
+    // 微信验证服务器
     // $response = $wechat->server->serve();
-    // // 将响应输出
-    // $response->send();exit; // Laravel 里请使用：return $response;
+    // $response->send();exit; 
 
     $wechat->server->push(function($message){
-        // $message = (object)$message2;
         switch ($message['MsgType']) {
             case 'event':
             if($message['Event'] == 'subscribe'){
@@ -56,11 +54,10 @@ Route::post('wechat/server', array('middleware' => ['web'], function($provider_n
     return $wechat->server->serve();
 
 }));
-// http://home.flynsarmy.com/flynsarmy/sociallogin/Google?s=/&f=/login
+
 Route::get('auth/session', array('middleware' => ['web'], function($provider_name, $action = "")
 {
     $app = WechatManager::instance()->app();
-    // $app = EasyWeChat\Factory::miniProgram($config);
     $session_third = $app->auth->session(Input::get('code'));
     return response()->json(['data'=>['login_code'=>'login_code', 'third_session'=>'------', 'test'=>$session_third], 'code'=>0]);
 }));
@@ -70,24 +67,7 @@ Route::get('auth/check_session', array('middleware' => ['web'], function($provid
 }));
 Route::get('beysong/weixin/wechat_callback', array('middleware' => ['web'], function()
 {
-    // $options = [
-    //     'debug'  => true,
-    //     'app_id' => Settings::get('appid', 501),
-    //     'token' => Settings::get('token', 502),
-    //     'secret'  => Settings::get('secret', 503),
-    //     'oauth' => [
-    //         'scopes'   => ['snsapi_userinfo'],
-    //         'callback' => '/beysong/weixin/wechat_callback',
-    //     ],
-    //     // 'aes_key' => null, // 可选
-    //     'log' => [
-    //         'level' => 'debug',
-    //         'file'  => '/tmp/easywechat.log', // XXX: 绝对路径！！！！
-    //     ],
-    //     //...
-    // ];
-
-    // $app = Factory::officialAccount($options);
+    
     $app = WechatManager::instance()->app();
     // $app = Factory::officialAccount();
     $oauth = $app->oauth;
@@ -102,5 +82,5 @@ Route::get('beysong/weixin/wechat_callback', array('middleware' => ['web'], func
     );
         Auth::login($user2);
 
-    header('location:'. $targetUrl); // 跳转到 user/profile
+    header('location:'. $targetUrl);
 }));

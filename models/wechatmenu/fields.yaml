@@ -15,7 +15,7 @@ fields:
             miniprogram: 小程序
             scancode_waitmsg: 扫码带提示
             scancode_push: 扫码推事件
-            pic_sysphoto: 系统牌照晒图
+            pic_sysphoto: 系统拍照晒图
             pic_photo_or_album: 拍照或者相册发图
             pic_weixin: 微信相册发图
         span: auto
