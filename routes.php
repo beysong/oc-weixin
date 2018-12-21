@@ -25,6 +25,7 @@ Route::post('wechat/server', array('middleware' => ['web'], function($provider_n
             'Event' => 'subscribe',
             'EventKey' => NULL];
         \Log::info($msg);
+        \Log::info($msg->MagType);
         switch ($msg->MsgType) {
             case 'event':
             if($msg->Event == 'subscribe'){
