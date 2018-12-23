@@ -1,0 +1,10 @@
+name: Tag
+form: $/beysong/weixin/models/tag/fields.yaml
+modelClass: Beysong\Weixin\Models\Tag
+defaultRedirect: beysong/weixin/tag
+create:
+    redirect: 'beysong/weixin/tag/update/:id'
+    redirectClose: beysong/weixin/tag
+update:
+    redirect: beysong/weixin/tag
+    redirectClose: beysong/weixin/tag

@@ -1,0 +1,12 @@
+list: $/beysong/weixin/models/tag/columns.yaml
+modelClass: Beysong\Weixin\Models\Tag
+title: Tag
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'beysong/weixin/tag/update/:id'

@@ -10,7 +10,8 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
 		return [
-			'Beysong\Weixin\Components\WechatSession' => 'WechatSession'
+			'Beysong\Weixin\Components\WechatSession' => 'WechatSession',
+			'Beysong\Weixin\Components\Adlets' => '小广告'
 		];
     }
 

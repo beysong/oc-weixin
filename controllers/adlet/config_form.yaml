@@ -1,0 +1,10 @@
+name: Adlet
+form: $/beysong/weixin/models/adlet/fields.yaml
+modelClass: Beysong\Weixin\Models\Adlet
+defaultRedirect: beysong/weixin/adlet
+create:
+    redirect: 'beysong/weixin/adlet/update/:id'
+    redirectClose: beysong/weixin/adlet
+update:
+    redirect: beysong/weixin/adlet
+    redirectClose: beysong/weixin/adlet

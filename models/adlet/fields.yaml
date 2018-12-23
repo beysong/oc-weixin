@@ -1,0 +1,37 @@
+fields:
+    title:
+        label: 标题
+        span: auto
+        required: 1
+        type: text
+    desc:
+        label: 描述
+        size: ''
+        span: auto
+        type: textarea
+    sort:
+        label: 排序
+        span: auto
+        default: '100'
+        type: text
+    type:
+        label: 类型
+        options:
+            默认: default
+        span: auto
+        type: dropdown
+    imgs:
+        label: 图片
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    tags:
+        label: 标签
+        nameFrom: name
+        descriptionFrom: desc
+        span: auto
+        type: relation

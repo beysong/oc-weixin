@@ -3,19 +3,24 @@
 # ===================================
 
 tabs:
-    fields:
-        appid:
-            label: App Id
-            comment: App Id.
-            tab: Weixin
-            span: auto
-        secret:
-            label: Secret
-            comment: Secret.
-            tab: Weixin
-            span: auto
-        token:
-            label: Token
-            comment: Token.
-            tab: Weixin
-            span: auto
+  fields:
+    appid:
+      label: App Id
+      comment: App Id.
+      tab: Weixin
+      span: auto
+    secret:
+      label: Secret
+      comment: Secret.
+      tab: Weixin
+      span: auto
+    token:
+      label: Token
+      comment: Token.
+      tab: Weixin
+      span: auto
+    aes_key:
+      label: EncodingAESKey
+      comment: EncodingAESKey.
+      tab: Weixin
+      span: auto

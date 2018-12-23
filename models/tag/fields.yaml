@@ -1,0 +1,9 @@
+fields:
+    name:
+        label: 名称
+        span: auto
+        type: text
+    desc:
+        label: 描述
+        span: auto
+        type: text

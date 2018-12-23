@@ -18,3 +18,11 @@ navigation:
                 label: 微信菜单
                 url: beysong/weixin/wechatmenu
                 icon: icon-sliders
+            side-menu-item-adlet:
+                label: 小广告
+                url: beysong/weixin/adlet
+                icon: icon-skyatlas
+            side-menu-item-tag:
+                label: 标签
+                url: beysong/weixin/tag
+                icon: icon-sitemap

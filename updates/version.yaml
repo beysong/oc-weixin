@@ -8,3 +8,12 @@
 1.0.3:
     - 'Created table beysong_weixin_menu'
     - builder_table_create_beysong_weixin_menu.php
+1.0.4:
+    - 'Created table beysong_weixin_adlet'
+    - builder_table_create_beysong_weixin_adlet.php
+1.0.5:
+    - 'Created table beysong_weixin_tag'
+    - builder_table_create_beysong_weixin_tag.php
+1.0.6:
+    - 'Created table beysong_weixin_adlet_tag'
+    - builder_table_create_beysong_weixin_adlet_tag.php
