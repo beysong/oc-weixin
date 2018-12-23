@@ -73,6 +73,7 @@ class Adlet extends Model
                 $query->where('slug', '<>', $exceptPost);
             }
         }
+        $query->where('status', '1');
 
         /*
          * Sorting

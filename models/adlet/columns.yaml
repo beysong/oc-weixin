@@ -11,6 +11,9 @@ columns:
     type:
         label: type
         type: text
+    status:
+        label: status
+        type: text
     sort:
         label: sort
         type: number

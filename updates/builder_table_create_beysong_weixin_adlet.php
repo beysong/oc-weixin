@@ -14,6 +14,7 @@ class BuilderTableCreateBeysongWeixinAdlet extends Migration
             $table->string('title');
             $table->string('desc')->nullable();
             $table->string('type')->nullable();
+            $table->string('status')->nullable()->default('1');
             $table->integer('sort')->nullable()->default(100);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

@@ -17,7 +17,7 @@ fields:
     type:
         label: 类型
         options:
-            默认: default
+            default: 默认
         span: auto
         type: dropdown
     imgs:
@@ -35,3 +35,11 @@ fields:
         descriptionFrom: desc
         span: auto
         type: relation
+    status:
+        label: 状态
+        options:
+            1: 启用
+            2: 下架
+            3: 草稿
+        span: auto
+        type: dropdown
