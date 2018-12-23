@@ -11,22 +11,13 @@
                 <th><a href="javascript:;">Name</a></th>
             </tr>
         </thead>
-        <tbody>
-            <?php foreach ($menuList['menu']['button'] as $item):  ?>
-            <tr>
-                <td>
-                    主
-                </td>
-                <td class="column-button nolink">
-                    <?= $item['name'] ?>
-                </td>
-                <td>
-                    <?= $item['name'] ?>
-                </td>
-            </tr>
-            <?php foreach ($item['sub_button'] as $item):  ?>
+        <?php if($menuList['menu']):?>
+            <tbody>
+                <?php foreach ($menuList['menu']['button'] as $item):  ?>
                 <tr>
-                    <td></td>
+                    <td>
+                        主
+                    </td>
                     <td class="column-button nolink">
                         <?= $item['name'] ?>
                     </td>
@@ -34,9 +25,20 @@
                         <?= $item['name'] ?>
                     </td>
                 </tr>
+                <?php foreach ($item['sub_button'] as $item):  ?>
+                    <tr>
+                        <td></td>
+                        <td class="column-button nolink">
+                            <?= $item['name'] ?>
+                        </td>
+                        <td>
+                            <?= $item['name'] ?>
+                        </td>
+                    </tr>
+                    <?php endforeach ?>
                 <?php endforeach ?>
-            <?php endforeach ?>
-        </tbody>
+            </tbody>
+        <?php endif ?>
     </table>
     
 </div>
