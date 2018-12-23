@@ -12,8 +12,8 @@ Route::post('wechat/server', array('middleware' => ['web'], function($provider_n
     $wechat = WechatManager::instance()->app();
 
     // 微信验证服务器
-    $response = $wechat->server->serve();
-    $response->send();exit; 
+    // $response = $wechat->server->serve();
+    // $response->send();exit; 
 
     $wechat->server->push(function($message){
         switch ($message['MsgType']) {
