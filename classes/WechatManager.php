@@ -81,7 +81,7 @@ class WechatManager
         
             'log' => [
                 'level' => 'debug',
-                'file' => __DIR__.'/wechat.log',
+                'file' => '/tmp/wechat_miniprogram.log',
             ],
         ];
         return $config;
