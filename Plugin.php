@@ -7,6 +7,7 @@ use Illuminate\Foundation\AliasLoader;
 
 class Plugin extends PluginBase
 {
+	public $require = ['Vdomah.JWTAuth'];
     public function registerComponents()
     {
 		return [

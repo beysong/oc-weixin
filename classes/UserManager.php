@@ -31,7 +31,7 @@ class UserManager
         if ( !$wechatUser )
         {
             // Does a user with this email exist?
-            if($user_details['email']){
+            if(isset($user_details['email'])){
                 $user = Auth::findUserByLogin( $user_details['email'] );
             }else{
                 $user = Auth::findUserByLogin( $user_details['id'].'@dev.com' );
@@ -58,7 +58,7 @@ class UserManager
         // Provider was found, return the attached user
         else
         {
-            if($user_details['email']){
+            if(isset($user_details['email'])){
                 $user = Auth::findUserByLogin( $user_details['email'] );
             }else{
                 $user = Auth::findUserByLogin( $user_details['id'].'@dev.com' );

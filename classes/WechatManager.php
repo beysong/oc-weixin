@@ -64,24 +64,33 @@ class WechatManager
     }
 
     //[3-1]微信小程序设置
-    public function mini_config($account)
+    public function mini_config()
     {
-        $wechat = Wechat::where('aid',$account)->first();
-        if (!$wechat) {
-            return $config = [];
-        }
+        // $config = [
+        //     'app_id'  => $wechat->wechat_app_id,         // AppID
+        //     'secret'  => $wechat->wechat_secret,     // AppSecret
+        //     'response_type' => 'array',
+        // ];
         $config = [
-            'app_id'  => $wechat->wechat_app_id,         // AppID
-            'secret'  => $wechat->wechat_secret,     // AppSecret
+            'app_id' => Settings::get('miniprogram_appid', 501),
+            'secret' => Settings::get('miniprogram_secret', 501),
+        
+            // 下面为可选项
+            // 指定 API 调用返回结果的类型：array(default)/collection/object/raw/自定义类名
             'response_type' => 'array',
+        
+            'log' => [
+                'level' => 'debug',
+                'file' => __DIR__.'/wechat.log',
+            ],
         ];
         return $config;
     }
 
     //[3-2]微信小程序相关
-    public function miniProgram($account)
+    public function miniProgram()
     {
-        $miniProgram = Factory::miniProgram($this->mini_config($account));
+        $miniProgram = Factory::miniProgram($this->mini_config());
         return $miniProgram;
     }
 
@@ -102,9 +111,9 @@ class WechatManager
     }
 
     //[4-2]微信开放平台相关
-    public function openPlatform($account)
+    public function openPlatform()
     {
-        $openPlatform = Factory::openPlatform($this->opconfig($account));
+        $openPlatform = Factory::openPlatform($this->opconfig());
         return $openPlatform;
     }
 

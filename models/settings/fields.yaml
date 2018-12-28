@@ -24,3 +24,13 @@ tabs:
       comment: EncodingAESKey.
       tab: Weixin
       span: auto
+    miniprogram_appid:
+      label: Miniprogram App Id
+      comment: Miniprogram App Id.
+      tab: Miniprogram
+      span: auto
+    miniprogram_secret:
+      label: Miniprogram Secret
+      comment: Miniprogram Secret.
+      tab: Miniprogram
+      span: auto
