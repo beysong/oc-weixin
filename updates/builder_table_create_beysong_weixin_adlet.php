@@ -12,7 +12,7 @@ class BuilderTableCreateBeysongWeixinAdlet extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('title');
-            $table->string('desc')->nullable();
+            $table->text('desc')->nullable();
             $table->string('type')->nullable();
             $table->string('status')->nullable()->default('1');
             $table->integer('sort')->nullable()->default(100);

@@ -137,6 +137,9 @@ class Adlets extends ComponentBase
 
     public function onRun()
     {
+        $this->addCss('assets/css/swiper.min.css');
+        $this->addJs('assets/js/swiper.min.js');
+        $this->addJs('assets/js/app.js');
         $this->prepareVars();
 
         $this->category = $this->page['category'] = $this->loadCategory();
