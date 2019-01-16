@@ -18,7 +18,7 @@ class BuilderTableCreateBeysongWeixinMenu extends Migration
             $table->string('media_id')->nullable();
             $table->string('appid', 128)->nullable();
             $table->string('pagepath')->nullable();
-            $table->integer('parent_id')->nullable()->unsigned();
+            $table->integer('parent_id')->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });
